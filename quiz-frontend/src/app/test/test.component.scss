@@ -1,0 +1,83 @@
+.example-container {
+  position: relative;
+  padding: 5px;
+}
+
+.example-table-container {
+  position: relative;
+  max-height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.example-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-rate-limit-reached {
+  color: #980000;
+  max-width: 360px;
+  text-align: center;
+}
+
+/* Column Widths */
+.mat-column-number,
+.mat-column-state {
+  max-width: 64px;
+}
+
+.mat-column-created {
+  max-width: 124px;
+}
+
+.mat-flat-button {
+  margin: 5px;
+}
+
+.z-depth-2 {
+  width: 15%;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.mat-input-wrapper{
+  border-bottom: 2px solid black;
+  margin-top: 10px;
+  width: auto;
+  padding: 5px;
+}
+
+.buttonStyle{
+
+  margin-top: 20px;
+   border-radius: 50px;
+   background-color: blue($color: #ff1313);
+   margin: 10px;
+   width: 5%;
+   padding: 10px;
+    border-color: red($color: #d43636);
+   box-shadow: 0 4px 5px 0 rgba(231, 30, 30, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.attemptedStyles{
+  color: #d83434;
+  margin-top: 20px;
+  border-radius: 50px;
+  background-color: blue($color: #ff1313);
+  margin: 10px;
+  width: 33%;
+  padding: 10px;
+   border-color: red($color: #d43636);
+  box-shadow: 0 4px 5px 0 rgba(231, 30, 30, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}

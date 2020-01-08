@@ -1,0 +1,39 @@
+
+<select (change)="changeShape($event.target)">
+  <option selected disabled>&nbsp;&nbsp;&nbsp; Please Select Question &nbsp;&nbsp;</option>
+   <option *ngFor="let country of countries"  value= {{country._id}}>
+    &nbsp;&nbsp; {{country.title}}&nbsp;&nbsp;
+  </option>
+</select>
+
+<div>
+  <p *ngIf="questions" style="background-color: #2196F3; color: white" class="z-depth-2">Question mark : {{markes}}</p>
+  <p>{{title}}</p>
+  <ul>
+    <li *ngFor="let project of options" class="mat-input-wrapper" (click)="firstClick(project)" [style.background-color]="project.BackgroundColour" >
+      <span >{{project.title}} </span>
+    </li>
+  </ul>
+
+   <div>
+   <p>{{correctandincorrect}}</p>
+   </div>
+</div>
+
+<div>
+  <div *ngIf="questions && isAtempted  else isatemptedquestion"  class="buttonStyle" (click)="submitAnswer()">Submit</div>
+  <ng-template #isatemptedquestion>
+
+    <div *ngIf="questions" class="attemptedStyles" >You are already attempted this questions</div>
+  </ng-template>
+</div>
+
+<div *ngIf="progressValue else progressbarvalue">
+  <progress-bar [progress]="progressValue" [color]="'#488aff'">
+  </progress-bar>
+  <ng-template #progressbarvalue>
+    <progress-bar [progress]='progressValue' [color]="'#488aff'">
+    </progress-bar>
+  </ng-template>
+</div>
+
